@@ -1,29 +1,37 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
+import { render } from "react-dom";
 import Radium, { Style } from "radium";
 
-import store from "./store";
-import { Text } from "./components/UI";
+import KnockoutText from "react-svg-knockout-text";
 
-const Thingy = () => <Text>Hello world</Text>;
+const styles = {
+  container: {
+    backgroundSize: "cover",
+    backgroundImage: "url(http://brokensquare.com/Code/assets/landscape.jpg)",
+    padding: "20% 20%"
+  }
+};
 
-const App = Radium(Thingy);
-
-ReactDOM.render(
-  <Provider store={store}>
-    <div>
-      <App />
-      <Style
-        rules={{
-          "*": {
-            margin: 0,
-            padding: 0,
-            boxSizing: "border-box"
-          }
-        }}
-      />
+const App = Radium(() =>
+  <div>
+    <div style={styles.container}>
+      <Knockout style={{}} text={"VERY INSPIRATION"} />
     </div>
-  </Provider>,
-  document.getElementById("app")
+  </div>
+);
+
+render(
+  <div>
+    <App />
+    <Style
+      rules={{
+        "*": {
+          margin: 0,
+          padding: 0,
+          boxSizing: "border-box"
+        }
+      }}
+    />
+  </div>,
+  document.getElementById("root")
 );
