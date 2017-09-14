@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:n-marshall/react-svg-knockout-text.git
+	branch = master
+	commit = 4aa477e9461f3667aab5fe027afcd3de55c90e23
+	parent = 888f119e1f86dea3b084f9eacf650cfb89bf29e6
+	cmdver = 0.3.1
